@@ -19,7 +19,7 @@ def generar_excel():
     try:
         d = request.json
         orig = base64.b64decode(TEMPLATE_B64)
-        wb = openpyxl.load_workbook(io.BytesIO(orig), rich_text=True)
+        wb = openpyxl.load_workbook(io.BytesIO(orig))
         ws1 = wb['Datos']
         ws2 = wb['Matriz de Sensibilidad']
 
